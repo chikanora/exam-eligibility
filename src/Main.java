@@ -35,7 +35,7 @@ public class Main
         hasValidExamToken = input.nextLine().trim().equalsIgnoreCase("yes");
 
         // If/Else logic
-        if (!hasPassedPreReq && !hasCompletedAssignments && !hasValidExamToken)
+        if (!hasPassedPreReq || !hasCompletedAssignments || !hasValidExamToken)
         {
             // If any of the booleans are false, prompt this message
             System.out.println("DENIED: Student must complete all requirements and have a valid exam token.");
