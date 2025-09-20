@@ -26,15 +26,44 @@ public class Main
         System.out.println("----------------------------------");
 
         System.out.println("Has the student passed the prerequisites? (yes/no): ");
-        hasPassedPreReq = input.nextLine().trim().equalsIgnoreCase("yes");
+        hasPassedPreReq = input.next().trim().equalsIgnoreCase("yes");
 
         System.out.println("Has the student completed all assignments? (yes/no): ");
-        hasCompletedAssignments = input.nextLine().trim().equalsIgnoreCase("yes");
+        hasCompletedAssignments = input.next().trim().equalsIgnoreCase("yes");
 
         System.out.println("Does the student got a valid exam token? (yes/no): ");
-        hasValidExamToken = input.nextLine().trim().equalsIgnoreCase("yes");
+        hasValidExamToken = input.next().trim().equalsIgnoreCase("yes");
 
+        System.out.println("-----------------------------------");
         // If/Else logic
+        if (hasPassedPreReq)
+        {
+            System.out.println("Did student passed their pre-requisites?" + " "  + hasPassedPreReq);
+        }
+        else if (!hasPassedPreReq)
+        {
+            System.out.println("Did student passed their pre-requisites?" + " "  + hasPassedPreReq);
+        }
+
+        if (hasCompletedAssignments)
+        {
+            System.out.println("Did student completed all of their assignments?" + " " + hasCompletedAssignments);
+        }
+        else if (!hasCompletedAssignments)
+        {
+            System.out.println("Did student completed all of their assignments?" + " " + hasCompletedAssignments);
+        }
+
+        if (hasValidExamToken)
+        {
+            System.out.println("Does student have a valid exam token?" + " " + hasValidExamToken);
+        }
+        else if (!hasValidExamToken)
+        {
+            System.out.println("Does student have a valid exam token?" + " " + hasValidExamToken);
+        }
+
+        // If student does not pass either or all the requirement to take the exam, deny them
         if (!hasPassedPreReq || !hasCompletedAssignments || !hasValidExamToken)
         {
             // If any of the booleans are false, prompt this message
